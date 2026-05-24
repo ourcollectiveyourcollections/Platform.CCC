@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Contribution",
+  "type": "object",
+  "required": ["contribution_id", "member_id", "date", "contribution_type", "status"],
+  "properties": {
+    "contribution_id": { "type": "string" },
+    "member_id": { "type": "string" },
+    "date": { "type": "string" },
+    "collective_scope": { "type": "string" },
+    "project_id": { "type": "string" },
+    "asset_id": { "type": "string" },
+    "contribution_type": { "type": "string" },
+    "hours_or_units": { "type": "number" },
+    "status": { "type": "string" },
+    "evidence_link": { "type": "string" },
+    "notes": { "type": "string" }
+  }
+}
