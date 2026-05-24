@@ -1,139 +1,189 @@
-# Batched Commit Plan
+# Platform.CCC Batched Commit Plan
+
+Date: 2026-05-24  
+Repository: `NCNBOUWER/Platform.CCC`  
+Execution lane: Co-Runner B primary
 
 ## Purpose
 
-Define rollback-safe commit groups for the Platform.CCC buildout.
+This plan groups Platform.CCC changes into rollback-safe, logically coherent batches.
 
-The objective is to keep each commit coherent, auditable and reversible.
+The objective is to prevent mixed-purpose commits, reduce repo drift, and preserve future Codex continuation readability.
 
-## Current status
+## Batch 0 — Recovery and transfer
 
-`NCNBOUWER/Platform.CCC` is the active canonical repo for Create Your Collective / CCC.
+Status: complete
 
-Completed root commits include:
+Includes:
 
-- failed ZIP removal
-- root README expansion
+- repository transfer to `NCNBOUWER/Platform.CCC`
+- failed ZIP deletion
+- root README promotion
+- `.gitignore` creation
 - root build plan
-- hierarchy config
-- schema starts
-- validation script
-- GitHub Actions validation workflow
-- co-runner interpretation
+
+Rollback risk: low.
+
+## Batch 1 — Coordination and source-of-truth control
+
+Status: active / mostly complete
+
+Includes:
+
+- co-runner orchestrator protocol
+- co-runner assignment interpretation
 - source-of-truth register
 - repo/Drive sync rules
-- blockers register
+- unresolved blockers register
+- current state summary
 
-## Commit group structure
+Rollback risk: low. These are control documents and do not alter runtime behaviour.
 
-### Batch 01 — Repository recovery and root promotion
+## Batch 2 — CCC platform architecture
 
-Purpose:
-
-- remove failed ZIP
-- promote root README
-- establish `.gitignore`
-- document nested upload wrapper status
-
-Status: in progress / mostly complete.
-
-### Batch 02 — CCC hierarchy and architecture
+Status: queued / active
 
 Files:
 
-- `config/platform_hierarchy.json`
-- `docs/architecture/ccc_platform_architecture.md`
-- `docs/architecture/token_hierarchy.md`
-- `docs/architecture/membership_roles.md`
-- `docs/architecture/library_model.md`
-- `docs/architecture/compliance_boundaries.md`
+```text
+docs/architecture/ccc_platform_architecture.md
+docs/architecture/token_hierarchy.md
+docs/architecture/membership_roles.md
+docs/architecture/library_model.md
+docs/architecture/royalty_logic_conceptual.md
+docs/architecture/compliance_boundaries.md
+```
 
 Purpose:
 
 - lock CCC / DAYCC / DAWC / DAW.G / DAW.B hierarchy
-- prevent layer confusion
-- define member and library concepts
-- preserve compliance-safe wording
+- stabilise membership and library model
+- preserve public/private and legal wording boundaries
 
-### Batch 03 — Registry, Drive and source-of-truth spine
+Rollback risk: low.
 
-Files:
+## Batch 3 — Repo, Drive and registry spine
 
-- `docs/source_of_truth_register.md`
-- `docs/repo_drive_sync_rules.md`
-- `docs/current_state_summary.md`
-- `docs/deployment_staging_map.md`
-- `docs/rollback_and_snapshot_strategy.md`
-- `registries/*.csv`
-
-Purpose:
-
-- define authority hierarchy
-- align GitHub with Drive and Sheets
-- document staging/export/archive logic
-- prepare Codex continuation
-
-### Batch 04 — Schemas, templates and examples
+Status: queued / active
 
 Files:
 
-- `schemas/*.schema.json`
-- `templates/*.template.json`
-- `examples/**/*.json`
+```text
+docs/repo_drive_sync_rules.md
+docs/source_of_truth_register.md
+docs/deployment_staging_map.md
+docs/rollback_and_snapshot_strategy.md
+registries/*.csv
+config/*.json
+```
 
 Purpose:
 
-- stabilise validation surface
-- provide safe public examples
-- support future automation and mint-pack generation
+- preserve source-of-truth integrity
+- map Drive and repo roles
+- define staging, mirror, generated and archive states
 
-### Batch 05 — Automation and validation
+Rollback risk: medium if deleting staging wrapper. Deletions require parity check first.
+
+## Batch 4 — Schemas, templates and validation
+
+Status: active
 
 Files:
 
-- `scripts/*.py`
-- `apps_script/*.gs`
-- `.github/workflows/*.yml`
+```text
+schemas/*.schema.json
+templates/*.json
+scripts/*.py
+.github/workflows/*.yml
+examples/**/*.json
+```
 
 Purpose:
 
-- validate metadata
-- scaffold Drive/Sheets automation
-- generate mint-pack/testnet-ready exports
+- define data contracts
+- validate core examples
+- support mint-pack generation and dashboard exports
 
-### Batch 06 — Interface and dashboard pathing
+Rollback risk: medium if schema names change after registry alignment.
+
+## Batch 5 — Interface and Squarespace alignment
+
+Status: queued
 
 Files:
 
-- `docs/interface/*.md`
-- `dashboard_widgets/*`
+```text
+docs/interface/squarespace_page_map.md
+docs/interface/dashboard_structure.md
+docs/interface/frontend_backend_contracts.md
+docs/interface/launch_readiness_checklist.md
+dashboard_widgets/*
+```
 
 Purpose:
 
-- map Squarespace pages
-- define dashboard modules
-- connect exported JSON to public/member-facing views
-- preserve private/public boundary
+- map public/member/admin modules
+- define dashboard JSON contracts
+- prepare Squarespace embeds and public/private gate
 
-### Batch 07 — Handoff and launch readiness
+Rollback risk: low to medium.
+
+## Batch 6 — Automation and Apps Script
+
+Status: queued
 
 Files:
 
-- `docs/codex_handoff_2026-05-27.md`
-- `docs/launch_readiness_checklist.md`
-- `docs/unresolved_blockers.md`
-- `docs/co_runner_assignment_interpretation.md`
+```text
+apps_script/*.gs
+scripts/build_mint_pack.py
+scripts/export_dashboard_json.py
+docs/automation_plan.md
+```
 
 Purpose:
 
-- prepare future continuation
-- track blockers
-- define final pre-launch checks
+- automate member onboarding
+- automate asset submission
+- automate dashboard export
+- scaffold mint-pack generation
 
-## Rollback rules
+Rollback risk: medium. Automation must remain disabled until folder IDs and permissions are confirmed.
 
-1. Revert whole batches where possible.
-2. Do not mix public interface files with schema changes in the same logical batch.
-3. Do not delete staging wrappers until root parity is confirmed.
-4. Preserve audit history for manual uploads and transfers.
-5. Do not commit secrets, ZIP exports or private Drive files.
+## Batch 7 — Codex handoff and launch readiness
+
+Status: queued
+
+Files:
+
+```text
+docs/codex_handoff_2026-05-27.md
+docs/launch_readiness_checklist.md
+docs/unresolved_blockers.md
+docs/current_state_summary.md
+```
+
+Purpose:
+
+- make system understandable to future build agents
+- preserve handoff state
+- record blockers and no-go conditions
+
+Rollback risk: low.
+
+## Commit discipline
+
+1. Do not mix architecture, automation and public website changes in one commit unless explicitly necessary.
+2. Prefer additive commits until the root parity check is complete.
+3. Do not delete nested staging files until root equivalents have been verified.
+4. Do not commit secrets or private member data.
+5. Keep every commit explainable in one sentence.
+
+## Next recommended commits
+
+1. Add architecture documents.
+2. Add interface documents.
+3. Add remaining schemas/templates.
+4. Add Codex handoff.
+5. Run metadata validation after examples are complete.
