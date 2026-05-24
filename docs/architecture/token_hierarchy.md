@@ -1,79 +1,112 @@
 # Token Hierarchy
 
+Repository: `NCNBOUWER/Platform.CCC`  
+Status: canonical scaffold
+
 ## Purpose
 
-Define the non-confused hierarchy of platform coin, launch collective coin, primary collective coin and sibling sub-collective coins.
+This document locks the separation between platform, launch collective, primary collective and sibling sub-collectives.
+
+The terms below are registry and metadata concepts until legal, tax and token-design review is complete.
 
 ## Canonical hierarchy
 
-| Layer | Name | Coin | Full name | Asset class | Precision |
-|---|---|---|---|---|---|
-| Platform | Create Your Collective | CCC | Creatives' Coin Collections | Members and contributors | 7dp+ |
-| Launch collective | Day A Week | DAYCC | Day-A-Week Community Coin | Open/non-primary members and groups | 5–6dp |
-| Primary collective | Day-A-Week-Collective | DAWC | Day-A-Week Collective | Founding groups and profiles | 6dp |
-| Sibling A | Day-A-Week Girls | DAW.G | Da.Gorls | Member profiles | 5dp |
-| Sibling B | Day-A-Week Boys | DAW.B | Da.Boiis | Member profiles | 5dp |
-
-## Inheritance logic
-
 ```text
-CCC
-└── DAYCC
-    └── DAWC
-        ├── DAW.G
-        └── DAW.B
+Create Your Collective
+Coin: CCC — Creatives' Coin Collections
+
+└── Day A Week
+    Coin: DAYCC — Day-A-Week Community Coin
+
+    └── Day-A-Week-Collective
+        Coin: DAWC — Day-A-Week Collective
+
+        ├── Day-A-Week Girls
+        │   Coin: DAW.G — Da.Gorls
+        │
+        └── Day-A-Week Boys
+            Coin: DAW.B — Da.Boiis
 ```
 
-Inheritance means records roll upward for classification and dashboard grouping.
+## Layer table
 
-It does not mean all downstream benefits automatically flow into every parent or sibling layer without explicit rules.
+| Layer | Name | Coin | Asset class | Precision target | Role |
+|---|---|---|---|---|---|
+| Platform | Create Your Collective | CCC | members + contributors | 7dp+ | reusable platform root |
+| Launch collective | Day A Week | DAYCC | open/non-primary members + groups | 5–6dp | first community shell |
+| Primary collective | Day-A-Week-Collective | DAWC | founding groups + profiles | 6dp | founding inner collective |
+| Sibling A | Day-A-Week Girls | DAW.G | member profiles | 5dp | branch-level profile/library scope |
+| Sibling B | Day-A-Week Boys | DAW.B | member profiles | 5dp | branch-level profile/library scope |
 
-## Sibling rule
+## Inheritance
+
+```text
+DAW.G → DAWC → DAYCC → CCC
+DAW.B → DAWC → DAYCC → CCC
+DAYCC-only participant → DAYCC → CCC
+CCC-only contributor → CCC
+```
+
+## Exclusivity
 
 ```text
 DAW.G ∩ DAW.B = Ø
 ```
 
-A founding sibling member belongs to either DAW.G or DAW.B, not both.
+A member cannot be in both DAW.G and DAW.B unless the governance model is explicitly changed later.
 
-Both inherit into DAWC.
+## Token state progression
 
-## Operational interpretation
-
-Early-stage records should be treated as:
-
-- profile records
-- contribution records
-- membership records
-- royalty accounting records
-- metadata records
-- mint-pack candidates
-
-They should not be described as guaranteed investment returns.
-
-## Ethereum role
-
-Ethereum is the target mint/wallet/provenance layer.
-
-It is not the system's first operational database.
-
-Recommended order:
+Use this progression before live token issuance:
 
 ```text
-registry row
-→ metadata JSON
-→ permission review
-→ mint pack
-→ testnet
-→ live mint only after review
+registry label
+→ metadata field
+→ internal accounting reference
+→ testnet token candidate
+→ reviewed live token
 ```
 
-## Token standard notes
+## Suggested technical standards
 
-Potential future standards:
+Early system:
 
-- ERC-721 for unique profile or canonical one-off records.
-- ERC-1155 for collections of collections and semi-fungible library records.
-- ERC-20-like accounting only if legal/tax review supports it.
+- JSON records
+- registry rows
+- dashboard exports
+- wallet address references only
 
-No live standard is locked until testnet architecture and review are complete.
+Later system:
+
+- ERC-721 for unique identity/profile records where required
+- ERC-1155 for collection-of-collections and layered asset libraries
+- ERC-20-like accounting only after legal/tax review
+
+## Wording guardrail
+
+Use:
+
+- token candidate
+- registry unit
+- accounting reference
+- profile record
+- library entry
+- royalty accounting record
+
+Avoid until reviewed:
+
+- dividend
+- guaranteed return
+- passive income
+- investment entitlement
+- asset-backed yield
+- security
+- financial product
+
+## Root config
+
+The canonical machine-readable hierarchy is:
+
+```text
+config/platform_hierarchy.json
+```
