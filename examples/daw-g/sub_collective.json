@@ -1,0 +1,13 @@
+{
+  "sub_collective_id": "SUB-DAWG",
+  "name": "Day-A-Week Girls",
+  "coin": "DAW.G",
+  "coin_full_name": "Da.Gorls",
+  "parent_collective_id": "COL-DAWC",
+  "sibling_rule": "mutually exclusive with DAW.B",
+  "asset_class": "Member profiles",
+  "royalty_precision": "5dp",
+  "drive_folder": "Day-A-Week.Girls",
+  "status": "scaffold",
+  "notes": "Sibling A."
+}
