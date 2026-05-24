@@ -1,0 +1,12 @@
+{
+  "mint_pack_id": "MINT-TEMPLATE-001",
+  "asset_id": "AST-TEMPLATE-001",
+  "project_id": "PRJ-TEMPLATE-001",
+  "token_standard_target": "ERC-1155 or ERC-721",
+  "network": "Ethereum testnet",
+  "metadata_path": "mint_packs/MINT-TEMPLATE-001/metadata.json",
+  "file_manifest_path": "mint_packs/MINT-TEMPLATE-001/manifest.json",
+  "status": "not_ready",
+  "review_required": true,
+  "notes": "No live mint until legal, metadata and permission review."
+}
