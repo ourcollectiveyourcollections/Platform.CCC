@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DashboardExport",
+  "type": "object",
+  "required": ["exported_at", "platform", "collectives"],
+  "properties": {
+    "exported_at": { "type": "string" },
+    "platform": { "type": "object" },
+    "collectives": { "type": "array" },
+    "sub_collectives": { "type": "array" },
+    "members": { "type": "array" },
+    "assets": { "type": "array" },
+    "projects": { "type": "array" },
+    "mint_queue": { "type": "array" },
+    "public_scope": { "type": "string" },
+    "redaction_status": { "type": "string" },
+    "notes": { "type": "string" }
+  }
+}
