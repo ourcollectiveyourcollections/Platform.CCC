@@ -1,0 +1,24 @@
+{
+  "allocation_record_id": "ALLOC-000000",
+  "scope": "asset_or_project",
+  "precision_label": "review_required",
+  "participants": [
+    {
+      "participant_type": "creator",
+      "participant_id": "MEM-PRIMARY",
+      "allocation_units": 500000
+    },
+    {
+      "participant_type": "contributor",
+      "participant_id": "MEM-CONTRIB-A",
+      "allocation_units": 250000
+    },
+    {
+      "participant_type": "collective",
+      "participant_id": "COL-DAWC",
+      "allocation_units": 250000
+    }
+  ],
+  "status": "template",
+  "notes": "Internal allocation scaffold only. This is not a payment promise, investment claim, or entitlement record."
+}
