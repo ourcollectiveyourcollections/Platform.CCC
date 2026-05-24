@@ -1,5 +1,8 @@
 # Compliance Boundaries
 
+Repository: `NCNBOUWER/Platform.CCC`  
+Status: conservative scaffold; not legal advice
+
 ## Purpose
 
 Define conservative public/private wording and operational boundaries for Platform.CCC.
@@ -18,135 +21,149 @@ It should not be presented as:
 - a financial product
 - a securities offering
 - a yield protocol
+- a tax minimisation system
+- a guaranteed royalty engine
 
-## Preferred terms
+## Safe language
 
 Use:
 
+- registry
 - profile record
-- contribution record
-- collection registry
-- library record
-- permission record
+- contributor record
+- asset record
+- project record
 - licence record
 - metadata record
-- mint-pack candidate
-- internal royalty accounting record
+- contribution ledger
+- internal accounting record
+- mint-ready package
+- testnet candidate
 - review required
-- testnet-ready candidate
 
-## Avoid unless legally reviewed
+## Restricted language
 
-Avoid:
+Avoid until reviewed:
 
-- guaranteed return
-- dividend entitlement
-- investment product
-- passive income token
+- dividend
+- investment return
+- profit guarantee
+- passive income
 - asset-backed yield
-- profit-share guarantee
-- ownership of someone else’s work by default
-- financial advice
-- tax advice
-- securities-like language
+- security token
+- tax advantage
+- guaranteed royalty
+- automatic entitlement
+- financial product
 
-## Public wording rule
+## Public/private boundary
 
-Public-facing pages should describe the system as:
+### Private/internal
 
-```text
-A Web2-first platform for creating structured, permission-aware, Web3-ready creator and collective libraries.
-```
+May contain:
 
-Do not describe it as:
+- draft profiles
+- private Drive paths
+- raw project notes
+- contract working drafts
+- unreviewed royalty/accounting assumptions
+- wallet address drafts
+- member contact details
 
-```text
-A system that guarantees income, dividends or investment returns.
-```
+### Public/member-facing
 
-## Asset ownership boundary
+May contain only:
 
-Default assumption:
+- approved profile displays
+- approved asset descriptions
+- approved project summaries
+- public-safe collection status
+- public-safe dashboard exports
+- review-status labels
 
-```text
-Creators retain ownership unless a reviewed licence or assignment says otherwise.
-```
+## No direct exposure rule
 
-The platform records:
+Public pages must not directly expose:
 
-- who created something
-- who contributed
-- what permission exists
-- where the file is stored
-- what metadata was approved
-- what royalty accounting record is attached
-
-The platform does not automatically own member assets.
-
-## Royalty boundary
-
-Royalty splits are internal accounting scaffolds until reviewed.
-
-Recommended wording:
-
-```text
-Royalty records document intended allocation logic for review and future implementation.
-```
-
-Avoid:
-
-```text
-This token guarantees a future payment.
-```
-
-## Token boundary
-
-Tokens and NFT records should be treated as metadata/provenance containers until reviewed.
-
-Potential functions:
-
-- profile record
-- access marker
-- provenance record
-- contribution proof
-- collection index
-- licence reference
-- mint-pack proof
-
-Do not imply that every token is a regulated or unregulated financial instrument. That analysis depends on implementation and jurisdiction.
-
-## Minecraft and gameplay boundary
-
-The Minecraft side is excluded from this repository’s current scope.
-
-Do not couple token ownership to gameplay advantage or cash-out in-game mechanics.
-
-## Public/private data boundary
-
-Do not expose:
-
-- legal names unless approved
-- private emails
-- wallet secrets
-- seed phrases
+- private Google Sheet tabs
+- raw private Drive folders
 - identity documents
-- raw private Drive links
-- unreviewed contracts
-- unreviewed royalty terms
+- personal emails or phone numbers
+- wallet secrets
+- contract drafts
+- unreviewed royalty split details
 
-## Review gates
+## Wallet boundary
 
-Before public launch, review:
+The platform may record public wallet addresses for reference.
 
-1. website copy
-2. dashboard fields
-3. profile display fields
-4. token descriptions
-5. royalty wording
-6. contract templates
-7. onboarding claims
-8. mint-pack metadata
+The platform must not store:
 
-## Current status
+- private keys
+- seed phrases
+- recovery phrases
+- signing credentials
+- custodial wallet secrets
 
-Compliance posture is conservative scaffold. Formal legal and tax review remains a blocker for live token issuance, public sales, royalty enforcement or commercial licensing claims.
+## Legal review triggers
+
+Require legal or specialist review before:
+
+- public token launch
+- live minting with commercial claims
+- revenue sharing
+- royalty enforcement
+- public fundraising
+- paid memberships tied to token entitlement
+- government/commercial contracts
+- cross-border commercial use
+
+## Tax review triggers
+
+Require tax review before:
+
+- distributions
+- member payments
+- royalty payments
+- business income allocation
+- token sales
+- NFT sales
+- barter/time-credit treatment
+- GST or income-tax claims
+
+## Minecraft separation
+
+Minecraft is not part of this decentralised-side MVP.
+
+Do not merge Minecraft gameplay, in-game advantage, or platform economics into Platform.CCC unless a separate bridge is explicitly approved.
+
+## Project separation
+
+Platform.CCC remains separate from unrelated projects unless explicitly bridged.
+
+Allowed shared methods:
+
+- registry-first architecture
+- public/private gates
+- repo discipline
+- dashboard methodology
+- source-of-truth controls
+
+Not automatically imported:
+
+- external project claims
+- unrelated IP
+- unrelated sovereign-capability framing
+- unrelated token models
+
+## Public wording requirement
+
+Every public-facing statement should answer:
+
+1. Is it accurate?
+2. Is it review-safe?
+3. Does it avoid financial-product framing?
+4. Does it avoid guaranteed outcomes?
+5. Does it preserve member privacy?
+
+If any answer is no, the wording remains private/draft.
