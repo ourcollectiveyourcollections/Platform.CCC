@@ -1,0 +1,14 @@
+{
+  "asset_id": "AST-000000",
+  "asset_title": "Example Asset",
+  "asset_type": "multi_contributor_nft",
+  "creator_member_id": "",
+  "contributor_ids": [],
+  "collective_scope": "CCC",
+  "drive_file_id_or_path": "",
+  "metadata_path": "metadata/assets/AST-000000.json",
+  "licence_type": "review_required",
+  "royalty_split_id": "",
+  "status": "draft",
+  "notes": "Container record for art, contract, build layer, media and metadata references."
+}
