@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.env
+.env.*
+.DS_Store
+secrets/
+private/
+wallets/
+*.key
+*.pem
+*.zip
