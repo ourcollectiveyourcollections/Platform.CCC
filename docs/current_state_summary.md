@@ -1,93 +1,82 @@
 # Platform.CCC Current State Summary
 
 Date: 2026-05-24  
-Repository: `NCNBOUWER/Platform.CCC`  
 Operator: Nathaniel Bouwer  
-Execution lane: Co-Runner B primary, with Lane A and Lane C support
+Execution lane: Co-Runner B primary, Lane A and Lane C support  
+Repository: `NCNBOUWER/Platform.CCC`
 
-## Executive state
+## Executive status
 
-Platform.CCC has moved from inaccessible/transferred scaffold into an active canonical repository under `NCNBOUWER`.
+`Platform.CCC` is now the canonical repository for **Create Your Collective / CCC**.
 
-The repository now has write access, root documentation, validation scaffolds and source-of-truth control files.
+The repository has moved from manual ZIP/upload recovery into active structured buildout.
 
-## Completed
+## Completed repo actions
 
-### Repository recovery
-
-- Repository transferred to `NCNBOUWER/Platform.CCC`.
-- Connector confirmed admin/maintain/push access.
-- Failed `Platform.CCC.zip` upload deleted.
-- Root `README.md` expanded.
-- `.gitignore` added, including `*.zip` exclusion.
-
-### Coordination alignment
-
-- Link-Drive feature branch inspected.
-- Co-runner assignment interpreted.
-- Platform.CCC mapped as Co-Runner B primary.
-- Orchestration protocol added.
-- Assignment interpretation added.
-
-### Source-of-truth controls
-
+- Repository transferred under `NCNBOUWER/Platform.CCC`.
+- Admin/maintain/push access confirmed.
+- Failed `Platform.CCC.zip` upload removed.
+- Root README expanded.
+- Root `.gitignore` added.
+- Root hierarchy config added.
+- Root build plan added.
+- Co-runner orchestration protocol added.
+- Co-runner assignment interpretation added.
 - Source-of-truth register added.
 - Repo/Drive sync rules added.
-- Blockers register added.
-- Batched commit plan added.
+- Unresolved blocker register added.
+- Core schemas started.
+- Validation script added.
+- GitHub Actions metadata validation workflow added.
+- CCC, DAYCC, DAWC, DAW.G and DAW.B example records started.
 
-### Build surface
+## Current known repository issue
 
-- `config/platform_hierarchy.json` added.
-- `schemas/collective.schema.json` added.
-- `schemas/member.schema.json` added.
-- `scripts/validate_metadata.py` added.
-- `.github/workflows/validate-metadata.yml` added.
-- CCC, DAYCC and DAWC example records added.
-- DAW.G and DAW.B examples are being staged.
-
-## Known current structure issue
-
-Manual upload placed scaffold files inside:
+The previous manual upload created a nested staging folder:
 
 ```text
 Platform.CCC_upload_root/
 ```
 
-This is a staging wrapper and should be retired only after required root parity is confirmed.
+This folder still acts as a staging mirror. It should be retired only after root parity has been confirmed.
 
-## Canonical hierarchy
+## Current source-of-truth decision
+
+| Record class | Canonical system |
+|---|---|
+| Platform hierarchy | GitHub `config/platform_hierarchy.json` |
+| Live registry rows | Google Sheets Master Registry |
+| Registry snapshots | GitHub `registries/*.csv` |
+| Raw files/media | Google Drive |
+| Schemas/templates/scripts | GitHub |
+| Public/member interface | Squarespace |
+| Mint/provenance target | Ethereum/testnet after review |
+
+## Current execution posture
+
+This repository is in Stage 0 / Stage 1 transition:
 
 ```text
-Create Your Collective / CCC
-└── Day A Week / DAYCC
-    └── Day-A-Week-Collective / DAWC
-        ├── Day-A-Week Girls / DAW.G
-        └── Day-A-Week Boys / DAW.B
+Stage 0 — scaffold, hierarchy, source-of-truth, validation
+Stage 1 — manual workflow using Drive + Sheets + GitHub templates
 ```
 
-## Active blockers
+## Immediate priority
 
-See:
+1. Complete root-level architecture docs.
+2. Complete root-level interface docs.
+3. Complete remaining schemas and templates.
+4. Add Codex handoff package.
+5. Add batched commit plan.
+6. Confirm root parity against `Platform.CCC_upload_root/`.
+7. Retire staging wrapper after parity check.
 
-```text
-docs/unresolved_blockers.md
-```
+## No-go conditions
 
-Primary active blockers:
+Do not proceed to live minting or public financial wording until:
 
-- nested upload wrapper still present
-- Sheets export quota previously blocked direct XLSX export
-- Drive folder IDs not yet encoded into automation config
-- dashboard endpoint not yet connected
-- legal/tax review not complete
-
-## Next execution pass
-
-1. Add missing architecture docs.
-2. Add missing interface docs.
-3. Add missing schemas and templates.
-4. Add Codex handoff file.
-5. Add deployment staging and rollback strategy.
-6. Confirm root parity against nested upload wrapper.
-7. Retire nested wrapper if safe.
+- legal/tax review is complete
+- metadata has been validated
+- private/public data boundary is enforced
+- wallet handling is defined without storing secrets
+- dashboard exports are redacted and reviewed
