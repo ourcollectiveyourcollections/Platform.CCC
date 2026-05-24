@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SubCollective",
+  "type": "object",
+  "required": [
+    "sub_collective_id",
+    "name",
+    "coin",
+    "parent_collective_id"
+  ],
+  "properties": {
+    "sub_collective_id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "coin": {
+      "type": "string"
+    },
+    "coin_full_name": {
+      "type": "string"
+    },
+    "parent_collective_id": {
+      "type": "string"
+    },
+    "sibling_rule": {
+      "type": "string"
+    },
+    "asset_class": {
+      "type": "string"
+    },
+    "royalty_precision": {
+      "type": "string"
+    },
+    "drive_folder": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

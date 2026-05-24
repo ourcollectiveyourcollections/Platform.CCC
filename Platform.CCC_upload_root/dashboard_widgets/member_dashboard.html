@@ -1,0 +1,18 @@
+<div class="cyc-card">
+  <h2>Member Dashboard</h2>
+  <p class="cyc-muted">Read-only scaffold widget. Connect to dashboard_export.json.</p>
+  <div id="cyc-member-dashboard"></div>
+</div>
+<script>
+async function loadMemberDashboard(url = "/dashboard_export.json") {
+  const target = document.getElementById("cyc-member-dashboard");
+  try {
+    const res = await fetch(url);
+    const data = await res.json();
+    target.innerHTML = `<pre>${JSON.stringify(data.members || [], null, 2)}</pre>`;
+  } catch (err) {
+    target.textContent = "Dashboard data unavailable.";
+  }
+}
+loadMemberDashboard();
+</script>

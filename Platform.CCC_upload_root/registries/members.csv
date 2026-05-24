@@ -1,0 +1,5 @@
+member_id,display_name,legal_name_optional,email,wallet_address,platform_coin,collective_coin,primary_collective_coin,sub_collective_coin,status,drive_folder,repo_url,notes
+MEM-000001,Nathaniel,,,,CCC,DAYCC,DAWC,DAW.B,founding scaffold,,,Bartender/researcher/platform architect
+MEM-DAWG-TEMPLATE,DAW.G Member Template,,,,CCC,DAYCC,DAWC,DAW.G,template,,,Use one row per member profile
+MEM-DAWB-TEMPLATE,DAW.B Member Template,,,,CCC,DAYCC,DAWC,DAW.B,template,,,Use one row per member profile
+MEM-DAYCC-TEMPLATE,Open DAYCC Member Template,,,,CCC,DAYCC,,,template,,,For non-primary/open members or groups

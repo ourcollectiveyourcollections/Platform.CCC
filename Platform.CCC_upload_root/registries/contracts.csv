@@ -1,0 +1,4 @@
+contract_id,contract_title,contract_type,collective_scope,linked_asset_id,linked_project_id,owner_member_id,drive_file_id_or_path,github_template_path,status,notes
+CON-TEMPLATE-001,Collective Asset Licence Template,licence,CCC,,,,CCC.Contract.Templates,templates/contracts/collective_asset_licence.md,template,Defines permissions and derivative approval
+CON-TEMPLATE-002,Contributor Participation Agreement,contributor_terms,CCC,,,,CCC.Contract.Templates,templates/contracts/contributor_participation.md,template,"Defines contribution, attribution and records"
+CON-TEMPLATE-003,Physical Deployment Licence,physical_build,DAWC,AST-TEMPLATE-001,PRJ-TEMPLATE-001,,CCC.Contract.Templates,templates/contracts/physical_deployment_licence.md,template,For mural/build/install/real-world deployment

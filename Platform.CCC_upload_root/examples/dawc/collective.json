@@ -1,0 +1,13 @@
+{
+  "collective_id": "COL-DAWC",
+  "name": "Day-A-Week-Collective",
+  "coin": "DAWC",
+  "coin_full_name": "Day-A-Week Collective",
+  "parent_id": "COL-DAYCC",
+  "scope": "primary_collective",
+  "asset_class": "Founding groups and founding member profiles",
+  "royalty_precision": "6dp",
+  "drive_folder": "Day-A-Week.Collective",
+  "status": "scaffold",
+  "notes": "Primary founding collective."
+}

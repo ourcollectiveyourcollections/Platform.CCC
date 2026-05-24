@@ -1,0 +1,9 @@
+term,definition,notes
+CCC,Creatives' Coin Collections; platform coin for Create Your Collective,Root platform layer
+DAYCC,Day-A-Week Community Coin,First launch collective/community shell
+DAWC,Day-A-Week Collective,Primary founding collective
+DAW.G,Da.Gorls,Sibling sub-collective under DAWC
+DAW.B,Da.Boiis,Sibling sub-collective under DAWC
+Library,"Structured folder + registry + metadata system for assets, profiles, contracts and projects",Not necessarily minted yet
+Mint pack,Export-ready metadata/file manifest bundle for Ethereum testnet/live mint review,Final proof layer
+Royalty points,Internal accounting precision field; not a guaranteed return or financial product,Legal/tax review required

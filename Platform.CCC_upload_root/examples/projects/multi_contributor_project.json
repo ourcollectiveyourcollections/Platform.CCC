@@ -1,0 +1,18 @@
+{
+  "project_id": "PRJ-TAYLOR-ESTELLE-LOUIS-001",
+  "project_title": "Layered Artwork to Physical Deployment",
+  "project_type": "layered_nft_project",
+  "collective_scope": "DAWC",
+  "lead_member_id": "",
+  "linked_assets": [
+    "AST-MULTI-001"
+  ],
+  "linked_contracts": [
+    "CON-TEMPLATE-001",
+    "CON-TEMPLATE-003"
+  ],
+  "drive_folder": "",
+  "github_path": "examples/projects/multi_contributor_project.json",
+  "status": "example",
+  "notes": "Example: Taylor creates digital art, Estelle prepares legal layer, Louis prepares physical build/deployment layer."
+}

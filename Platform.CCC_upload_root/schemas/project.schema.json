@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Project",
+  "type": "object",
+  "required": [
+    "project_id",
+    "project_title",
+    "project_type",
+    "collective_scope",
+    "status"
+  ],
+  "properties": {
+    "project_id": {
+      "type": "string"
+    },
+    "project_title": {
+      "type": "string"
+    },
+    "project_type": {
+      "type": "string"
+    },
+    "collective_scope": {
+      "type": "string"
+    },
+    "lead_member_id": {
+      "type": "string"
+    },
+    "linked_assets": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "linked_contracts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "drive_folder": {
+      "type": "string"
+    },
+    "github_path": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

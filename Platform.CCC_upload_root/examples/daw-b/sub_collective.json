@@ -1,0 +1,13 @@
+{
+  "sub_collective_id": "SUB-DAWB",
+  "name": "Day-A-Week Boys",
+  "coin": "DAW.B",
+  "coin_full_name": "Da.Boiis",
+  "parent_collective_id": "COL-DAWC",
+  "sibling_rule": "mutually exclusive with DAW.G",
+  "asset_class": "Member profiles",
+  "royalty_precision": "5dp",
+  "drive_folder": "Day-A-Week.Boys",
+  "status": "scaffold",
+  "notes": "Sibling B."
+}

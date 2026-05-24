@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ContractRecord",
+  "type": "object",
+  "required": [
+    "contract_id",
+    "contract_title",
+    "contract_type",
+    "status"
+  ],
+  "properties": {
+    "contract_id": {
+      "type": "string"
+    },
+    "contract_title": {
+      "type": "string"
+    },
+    "contract_type": {
+      "type": "string"
+    },
+    "collective_scope": {
+      "type": "string"
+    },
+    "linked_asset_id": {
+      "type": "string"
+    },
+    "linked_project_id": {
+      "type": "string"
+    },
+    "owner_member_id": {
+      "type": "string"
+    },
+    "drive_file_id_or_path": {
+      "type": "string"
+    },
+    "github_template_path": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+index_id,drive_area,internal_folder_name,system_layer,purpose,linked_registry_tab,notes
+IDX-001,Root,Create Your Collective.Platform,platform_ops,Operational data bridges and registries,Dash/Index,Contains CreativeCollection.Data and CreativeCollection.Registry
+IDX-002,Root,Create Your Collective.CCC,platform_coin_library,CCC platform coin/library layer,Collectives,Contains Creative Coin Collection and child coins/examples
+IDX-003,Root,Create Your Collective.Library,shared_library,Layer/build/mint assets,Assets/Projects/Mint Queue,Contains Layers and Build folders
+IDX-004,Root,Create Your Collective.Archive,archive,Retired or superseded records,Audit Log,Empty at scan time
+IDX-005,Platform,CreativeCollection.Registry,registry,Google Sheets registries,All,"Master, CCC, DAWCC, DAWC, EMC^2, JOY, template registries"
+IDX-006,Platform,CreativeCollection.Data,integration_data,"Drive<>Repo, Drive<>Dash, Drive<>Drive bridges",Permissions,Automation bridge folders

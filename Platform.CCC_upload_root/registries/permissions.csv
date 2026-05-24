@@ -1,0 +1,5 @@
+permission_id,resource,resource_type,role,access_level,applies_to,status,notes
+PERM-DRIVE-ADMIN,Create Your Collective root,Drive folder,Platform Admin,owner/admin,Admin account,active scaffold,Central admin only
+PERM-MEMBER-FOLDER,Individual member folder,Drive folder,Member,owner/editor on own folder,Each member,template,Each person holds their own Drive/node
+PERM-SHARED-LIBRARY,Shared layer libraries,Drive folder,Member/Contributor,read/comment/upload as approved,Approved members,template,Access determined by hierarchy
+PERM-GITHUB-MAIN,GitHub main branch,Repository branch,Maintainer,protected write via PR,System admin,template,No direct AI-to-main writes

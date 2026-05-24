@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RoyaltySplit",
+  "type": "object",
+  "required": [
+    "royalty_split_id",
+    "scope",
+    "precision",
+    "recipients",
+    "status"
+  ],
+  "properties": {
+    "royalty_split_id": {
+      "type": "string"
+    },
+    "scope": {
+      "type": "string"
+    },
+    "precision": {
+      "type": "string"
+    },
+    "recipients": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "recipient_type",
+          "recipient_id",
+          "points"
+        ],
+        "properties": {
+          "recipient_type": {
+            "type": "string"
+          },
+          "recipient_id": {
+            "type": "string"
+          },
+          "points": {
+            "type": "integer"
+          },
+          "percentage_display": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "status": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

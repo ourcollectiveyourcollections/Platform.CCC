@@ -1,0 +1,27 @@
+{
+  "royalty_split_id": "ROY-000000",
+  "scope": "asset/project",
+  "precision": "7dp+ platform; 5-6dp community; 5dp branch",
+  "recipients": [
+    {
+      "recipient_type": "creator",
+      "recipient_id": "MEM-PRIMARY",
+      "points": 500000,
+      "percentage_display": "50.0000%"
+    },
+    {
+      "recipient_type": "contributor",
+      "recipient_id": "MEM-CONTRIB-A",
+      "points": 250000,
+      "percentage_display": "25.0000%"
+    },
+    {
+      "recipient_type": "collective",
+      "recipient_id": "COL-DAWC",
+      "points": 250000,
+      "percentage_display": "25.0000%"
+    }
+  ],
+  "status": "template",
+  "notes": "Internal accounting only until legal/tax review."
+}

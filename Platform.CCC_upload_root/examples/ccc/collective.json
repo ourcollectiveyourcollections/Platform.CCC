@@ -1,0 +1,13 @@
+{
+  "collective_id": "COL-CCC",
+  "name": "Create Your Collective",
+  "coin": "CCC",
+  "coin_full_name": "Creatives' Coin Collections",
+  "parent_id": null,
+  "scope": "platform",
+  "asset_class": "Members and contributors",
+  "royalty_precision": "7dp+",
+  "drive_folder": "Create Your Collective.CCC",
+  "status": "scaffold",
+  "notes": "Root platform layer."
+}

@@ -1,0 +1,17 @@
+{
+  "asset_id": "AST-MULTI-001",
+  "asset_title": "Multifaceted Collective Artwork Example",
+  "asset_type": "multi_contributor_nft",
+  "creator_member_id": "MEM-TAYLOR",
+  "contributor_ids": [
+    "MEM-ESTELLE",
+    "MEM-LOUIS"
+  ],
+  "collective_scope": "DAWC",
+  "drive_file_id_or_path": "",
+  "metadata_path": "examples/assets/multi_contributor_asset.json",
+  "licence_type": "collective_commercial_review_required",
+  "royalty_split_id": "ROY-MULTI-001",
+  "status": "example",
+  "notes": "NFT as a container record for art + contract + physical deployment + provenance."
+}

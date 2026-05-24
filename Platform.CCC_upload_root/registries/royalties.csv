@@ -1,0 +1,4 @@
+royalty_split_id,scope,precision,recipient_type,recipient_id,points,percentage_display,status,notes
+ROY-TEMPLATE-001,asset/project,7dp+ platform; 5-6dp community; 5dp branch,creator,MEM-PRIMARY,500000,50.0000%,template,Internal accounting only until legal/tax review
+ROY-TEMPLATE-001,asset/project,7dp+ platform; 5-6dp community; 5dp branch,contributor,MEM-CONTRIB-A,250000,25.0000%,template,Example contributor
+ROY-TEMPLATE-001,asset/project,7dp+ platform; 5-6dp community; 5dp branch,collective,COL-DAWC,250000,25.0000%,template,Collective/platform reserve

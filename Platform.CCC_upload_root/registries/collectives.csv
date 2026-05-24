@@ -1,0 +1,4 @@
+collective_id,name,coin,coin_full_name,parent_id,scope,asset_class,royalty_precision,drive_folder,status,notes
+COL-CCC,Create Your Collective,CCC,Creatives' Coin Collections,,platform,Members and contributors,7dp+,Create Your Collective.CCC,active scaffold,Platform product layer
+COL-DAYCC,Day A Week,DAYCC,Day-A-Week Community Coin,COL-CCC,launch_collective,Open and non-primary members/groups,5-6dp,Day-A-Week.Community,active scaffold,Base collection for all using platform under Day A Week
+COL-DAWC,Day-A-Week-Collective,DAWC,Day-A-Week Collective,COL-DAYCC,primary_collective,Founding groups and founding member profiles,6dp,Day-A-Week.Collective,active scaffold,Primary founding collective

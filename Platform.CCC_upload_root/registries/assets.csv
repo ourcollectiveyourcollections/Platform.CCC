@@ -1,0 +1,4 @@
+asset_id,asset_title,asset_type,creator_member_id,contributor_ids,collective_scope,drive_file_id_or_path,metadata_path,licence_type,royalty_split_id,status,notes
+AST-TEMPLATE-001,Layered Collective NFT Template,multi_contributor_nft,,,CCC/DAYCC/DAWC/DAW.G/DAW.B,,schemas/assets/asset.template.json,review_required,ROY-TEMPLATE-001,template,Container record: art + legal + build + metadata
+AST-LAYER-BG,Background Layer Template,visual_background,,,CCC,,schemas/assets/background.template.json,collective_use_review,ROY-TEMPLATE-001,template,Stored under CCC.Backgrounds
+AST-LAYER-FG,Foreground Layer Template,visual_foreground,,,CCC,,schemas/assets/foreground.template.json,collective_use_review,ROY-TEMPLATE-001,template,Stored under CCC.Foregrounds

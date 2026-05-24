@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Member",
+  "type": "object",
+  "required": [
+    "member_id",
+    "display_name",
+    "platform_coin",
+    "status"
+  ],
+  "properties": {
+    "member_id": {
+      "type": "string"
+    },
+    "display_name": {
+      "type": "string"
+    },
+    "legal_name_optional": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "wallet_address": {
+      "type": "string"
+    },
+    "platform_coin": {
+      "type": "string"
+    },
+    "collective_coin": {
+      "type": "string"
+    },
+    "primary_collective_coin": {
+      "type": "string"
+    },
+    "sub_collective_coin": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "drive_folder": {
+      "type": "string"
+    },
+    "repo_url": {
+      "type": "string"
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+:root {
+  --cyc-border: #d7dbe7;
+  --cyc-bg: #f7f8fb;
+  --cyc-text: #20242f;
+}
+
+.cyc-card {
+  border: 1px solid var(--cyc-border);
+  border-radius: 14px;
+  padding: 16px;
+  margin: 12px 0;
+  background: var(--cyc-bg);
+  color: var(--cyc-text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.cyc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.cyc-muted {
+  opacity: 0.72;
+}

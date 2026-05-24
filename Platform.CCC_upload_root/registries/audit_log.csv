@@ -1,0 +1,4 @@
+audit_id,date,event,actor,source,result,notes
+AUD-20260524-001,2026-05-24,Drive folder layout inspected,Assistant,Google Drive connector,completed,No new Drive files created
+AUD-20260524-002,2026-05-24,GitHub repository inspected,Assistant,GitHub connector,completed,Repo visible but connector write returned 403
+AUD-20260524-003,2026-05-24,Manual upload ZIP generated,Assistant,local package build,completed,Package generated in sandbox

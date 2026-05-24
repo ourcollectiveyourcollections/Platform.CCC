@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Asset",
+  "type": "object",
+  "required": [
+    "asset_id",
+    "asset_title",
+    "asset_type",
+    "collective_scope",
+    "status"
+  ],
+  "properties": {
+    "asset_id": {
+      "type": "string"
+    },
+    "asset_title": {
+      "type": "string"
+    },
+    "asset_type": {
+      "type": "string"
+    },
+    "creator_member_id": {
+      "type": "string"
+    },
+    "contributor_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "collective_scope": {
+      "type": "string"
+    },
+    "drive_file_id_or_path": {
+      "type": "string"
+    },
+    "metadata_path": {
+      "type": "string"
+    },
+    "licence_type": {
+      "type": "string"
+    },
+    "royalty_split_id": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

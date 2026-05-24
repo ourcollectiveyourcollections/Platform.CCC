@@ -1,0 +1,16 @@
+{
+  "member_id": "MEM-000000",
+  "display_name": "Example Member",
+  "legal_name_optional": "",
+  "email": "",
+  "wallet_address": "",
+  "platform_coin": "CCC",
+  "collective_coin": "DAYCC",
+  "primary_collective_coin": "DAWC",
+  "sub_collective_coin": "",
+  "status": "template",
+  "drive_folder": "",
+  "repo_url": "",
+  "skills": [],
+  "notes": "Each person should hold their own Drive/node and optional repo."
+}

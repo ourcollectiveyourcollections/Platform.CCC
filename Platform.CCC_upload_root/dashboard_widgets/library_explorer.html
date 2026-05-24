@@ -1,0 +1,19 @@
+<div class="cyc-card">
+  <h2>Library Explorer</h2>
+  <p class="cyc-muted">Read-only scaffold widget. Connect to dashboard_export.json.</p>
+  <div id="cyc-library-explorer"></div>
+</div>
+<script>
+async function loadLibraryExplorer(url = "/dashboard_export.json") {
+  const target = document.getElementById("cyc-library-explorer");
+  try {
+    const res = await fetch(url);
+    const data = await res.json();
+    const assets = data.assets || [];
+    target.innerHTML = assets.map(a => `<div><strong>${a.asset_title || a.asset_id}</strong> — ${a.status || ""}</div>`).join("");
+  } catch (err) {
+    target.textContent = "Library data unavailable.";
+  }
+}
+loadLibraryExplorer();
+</script>

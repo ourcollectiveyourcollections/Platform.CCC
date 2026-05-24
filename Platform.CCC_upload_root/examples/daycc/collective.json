@@ -1,0 +1,13 @@
+{
+  "collective_id": "COL-DAYCC",
+  "name": "Day A Week",
+  "coin": "DAYCC",
+  "coin_full_name": "Day-A-Week Community Coin",
+  "parent_id": "COL-CCC",
+  "scope": "launch_collective",
+  "asset_class": "Open and non-primary members/groups",
+  "royalty_precision": "5-6dp",
+  "drive_folder": "Day-A-Week.Community",
+  "status": "scaffold",
+  "notes": "Base collection for all using platform under Day A Week."
+}

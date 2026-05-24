@@ -1,0 +1,2 @@
+contribution_id,member_id,date,collective_scope,project_id,asset_id,contribution_type,hours_or_units,status,evidence_link,notes
+CONTR-TEMPLATE-001,MEM-000001,2026-05-24,DAWC,PRJ-DAYCC-001,,architecture/planning,1,scaffold,,Initial registry scaffold
