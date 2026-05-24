@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Collective",
+  "type": "object",
+  "required": ["collective_id", "name", "coin", "scope", "asset_class", "status"],
+  "properties": {
+    "collective_id": { "type": "string" },
+    "name": { "type": "string" },
+    "coin": { "type": "string" },
+    "coin_full_name": { "type": "string" },
+    "parent_id": { "type": ["string", "null"] },
+    "scope": {
+      "type": "string",
+      "enum": ["platform", "launch_collective", "primary_collective", "sub_collective", "project_collective"]
+    },
+    "asset_class": { "type": "string" },
+    "royalty_precision": { "type": "string" },
+    "drive_folder": { "type": "string" },
+    "status": { "type": "string" },
+    "notes": { "type": "string" }
+  }
+}
