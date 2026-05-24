@@ -1,0 +1,40 @@
+{
+  "platform": {
+    "name": "Create Your Collective",
+    "coin": "CCC",
+    "coin_full_name": "Creatives' Coin Collections",
+    "asset_class": "Members and contributors",
+    "royalty_precision": "7dp+",
+    "target_chain": "Ethereum"
+  },
+  "launch_collective": {
+    "name": "Day A Week",
+    "coin": "DAYCC",
+    "coin_full_name": "Day-A-Week Community Coin",
+    "asset_class": "Open and non-primary members or groups",
+    "royalty_precision": "5-6dp"
+  },
+  "primary_collective": {
+    "name": "Day-A-Week-Collective",
+    "coin": "DAWC",
+    "coin_full_name": "Day-A-Week Collective",
+    "asset_class": "Founding groups and member profiles",
+    "royalty_precision": "6dp"
+  },
+  "sub_collectives": [
+    {
+      "name": "Day-A-Week Girls",
+      "coin": "DAW.G",
+      "coin_full_name": "Da.Gorls",
+      "asset_class": "Member profiles",
+      "royalty_precision": "5dp"
+    },
+    {
+      "name": "Day-A-Week Boys",
+      "coin": "DAW.B",
+      "coin_full_name": "Da.Boiis",
+      "asset_class": "Member profiles",
+      "royalty_precision": "5dp"
+    }
+  ]
+}
