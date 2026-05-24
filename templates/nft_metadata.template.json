@@ -1,0 +1,23 @@
+{
+  "name": "Example Library Record",
+  "description": "A reviewed library record for a project, profile or asset within Create Your Collective.",
+  "image": "",
+  "external_url": "",
+  "attributes": [
+    { "trait_type": "Platform", "value": "Create Your Collective" },
+    { "trait_type": "Platform Coin", "value": "CCC" },
+    { "trait_type": "Collective", "value": "Day A Week" },
+    { "trait_type": "Collective Coin", "value": "DAYCC" }
+  ],
+  "properties": {
+    "asset_id": "AST-000000",
+    "project_id": "PRJ-000000",
+    "contributors": [],
+    "rights": {
+      "licence_type": "review_required",
+      "derivatives_allowed": false,
+      "approval_required": true
+    },
+    "allocation_record_id": "ALLOC-000000"
+  }
+}
