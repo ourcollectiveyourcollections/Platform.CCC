@@ -1,0 +1,41 @@
+{
+  "manifest_status": "template_only",
+  "repository": "NCNBOUWER/Platform.CCC",
+  "last_reviewed": "YYYY-MM-DD",
+  "notes": "Replace placeholder IDs only after confirming Drive permissions. Do not expose private member folder IDs in public exports.",
+  "drive_roots": [
+    {
+      "logical_name": "platform_root",
+      "display_name": "Create Your Collective.Platform",
+      "folder_id": "REPLACE_WITH_FOLDER_ID",
+      "authority": "operations_and_registry_bridge",
+      "public_export_allowed": false
+    },
+    {
+      "logical_name": "ccc_library",
+      "display_name": "Create Your Collective.CCC",
+      "folder_id": "REPLACE_WITH_FOLDER_ID",
+      "authority": "platform_coin_library",
+      "public_export_allowed": false
+    },
+    {
+      "logical_name": "shared_library",
+      "display_name": "Create Your Collective.Library",
+      "folder_id": "REPLACE_WITH_FOLDER_ID",
+      "authority": "shared_layers_and_build_outputs",
+      "public_export_allowed": false
+    },
+    {
+      "logical_name": "archive",
+      "display_name": "Create Your Collective.Archive",
+      "folder_id": "REPLACE_WITH_FOLDER_ID",
+      "authority": "archive_and_recovery",
+      "public_export_allowed": false
+    }
+  ],
+  "safety": {
+    "raw_drive_ids_are_private_by_default": true,
+    "public_exports_use_redacted_records_only": true,
+    "member_folder_ids_require_operator_approval": true
+  }
+}
