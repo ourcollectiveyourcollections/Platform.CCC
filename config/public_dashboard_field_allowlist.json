@@ -1,0 +1,29 @@
+{
+  "status": "scaffold",
+  "purpose": "Defines which fields may be exported to public or member-facing dashboards after review.",
+  "default_rule": "deny_unless_allowed",
+  "public_allowed_fields": {
+    "platform": ["name", "coin", "public_status"],
+    "collectives": ["collective_id", "name", "coin", "scope", "status", "public_description"],
+    "sub_collectives": ["sub_collective_id", "name", "coin", "parent_collective_id", "status", "public_description"],
+    "members": ["member_id", "display_name", "public_role", "public_profile_status"],
+    "assets": ["asset_id", "asset_title", "asset_type", "collective_scope", "status", "public_preview_uri"],
+    "projects": ["project_id", "project_title", "project_type", "collective_scope", "status", "public_summary"],
+    "mint_queue": ["mint_pack_id", "asset_id", "project_id", "network", "status", "review_required"]
+  },
+  "never_export_fields": [
+    "legal_name_optional",
+    "email",
+    "phone",
+    "private_notes",
+    "wallet_private_key",
+    "seed_phrase",
+    "recovery_phrase",
+    "identity_document",
+    "raw_drive_link",
+    "private_drive_folder_id",
+    "unreviewed_contract_text",
+    "unreviewed_allocation_details"
+  ],
+  "review_required_before_public_export": true
+}
