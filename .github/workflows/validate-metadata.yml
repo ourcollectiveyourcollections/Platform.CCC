@@ -22,3 +22,6 @@ jobs:
           python scripts/validate_metadata.py examples/ccc/collective.json
           python scripts/validate_metadata.py examples/daycc/collective.json
           python scripts/validate_metadata.py examples/dawc/collective.json
+          python scripts/validate_metadata.py examples/assets/multi_contributor_asset.json
+          python scripts/validate_metadata.py examples/projects/multi_contributor_project.json
+          python scripts/validate_metadata.py examples/mint_packs/MINT-TEMPLATE-001.json
