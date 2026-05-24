@@ -1,8 +1,13 @@
 # Membership Roles
 
+Repository: `NCNBOUWER/Platform.CCC`  
+Status: canonical membership scaffold
+
 ## Purpose
 
 Define member, contributor and admin role types for Platform.CCC.
+
+The membership model must support individual sovereignty, shared libraries, collective access and public/private boundaries.
 
 ## Member as node
 
@@ -19,116 +24,189 @@ identity/profile
 + permission status
 + linked assets
 + linked projects
-+ royalty accounting references
++ royalty accounting route
++ dashboard visibility setting
 ```
 
 ## Role classes
 
-### Platform participant
+### Platform participant — CCC
 
-Layer: CCC
-
-A person or group with a profile under Create Your Collective.
+A person or group that participates at the Create Your Collective platform layer.
 
 May include:
 
-- creator
-- contributor
-- admin
-- observer
-- external collaborator
-- future customer collective admin
+- contributors
+- platform users
+- future collective creators
+- template creators
+- advisors
+- system maintainers
 
-### Launch collective participant
+Default access:
 
-Layer: DAYCC
+- platform onboarding docs
+- own profile record
+- own Drive/member node if approved
+- public/shared examples
 
-A member or group sitting under the broad Day A Week launch community.
+### Launch community participant — DAYCC
 
-This includes open and non-primary members or groups.
+A person or group under the Day A Week launch collective but outside the primary founding collective.
 
-### Primary collective participant
+May include:
 
-Layer: DAWC
+- open members
+- non-primary members
+- external groups
+- collaborators
+- future community participants
 
-A founding member or founding group profile under Day-A-Week-Collective.
+Default access:
 
-### Sibling sub-collective member
+- DAYCC community dashboard
+- relevant public/shared community libraries
+- own contribution records
 
-Layer: DAW.G or DAW.B
+### Primary founding member — DAWC
 
-Member profile in one founding sibling branch.
+A founding member or founding group inside Day-A-Week-Collective.
 
-Rule:
+May include:
+
+- founding profiles
+- founding branches
+- shared founding projects
+- initial collective governance participants
+
+Default access:
+
+- DAWC dashboard
+- founding collective libraries
+- branch assignment
+- contribution and project records
+
+### Sibling sub-collective member — DAW.G / DAW.B
+
+A member profile belonging to one sibling branch under DAWC.
+
+Rules:
 
 ```text
-A member may be DAW.G or DAW.B, not both.
+member ∈ DAW.G OR member ∈ DAW.B
+member cannot be in both by default
+member inherits upward into DAWC, DAYCC and CCC
 ```
 
-## Functional roles
+Default access:
 
-| Role | Function | Example permissions |
-|---|---|---|
-| Platform Admin | System-level governance | repo/admin, master Drive, registry oversight |
-| Collective Admin | Collective-level coordination | manage assigned collective records |
-| Creator | Primary asset creator | submit assets, approve derived use where assigned |
-| Contributor | Adds work to a project | submit contributions, receive attribution |
-| Reviewer | Checks wording/metadata/permissions | mark review status |
-| Public Viewer | Consumes published outputs | read-only public dashboard access |
+- own branch dashboard
+- own member folder
+- branch-shared libraries
+- approved DAWC libraries
 
-## Contributor categories
+### Contributor
 
-Possible categories:
+A contributor can provide value without being a full member of a specific branch.
+
+Contributor types:
 
 - visual artist
-- tattoo artist
 - musician / DJ
-- legal contributor
-- physical builder
 - writer
-- researcher
-- barista / hospitality creator
-- social media contributor
-- events contributor
-- business/project operator
-- community support worker
+- legal support
+- builder / physical deployment support
+- hair / beauty / styling contributor
+- hospitality / event contributor
+- technical contributor
+- admin / operations contributor
 
-These are not fixed castes. They are signals from contribution history.
+Default access:
 
-## Profile record fields
+- project-specific folders
+- project-specific contribution records
+- limited dashboard visibility
 
-Minimum fields:
+### Collective admin
+
+A collective admin manages one defined scope.
+
+Admin types:
+
+- platform admin
+- launch collective admin
+- primary collective admin
+- sub-collective admin
+- project admin
+- registry admin
+- interface admin
+
+Admin restrictions:
+
+- cannot publish unreviewed public claims
+- cannot expose private Drive records
+- cannot approve live minting alone
+- cannot alter hierarchy without coordinator review
+
+## Permission dimensions
+
+Membership is not one-dimensional. Access should be calculated from:
+
+```text
+platform_scope
+collective_scope
+branch_scope
+project_scope
+asset_scope
+privacy_status
+review_status
+```
+
+## Folder ownership principle
+
+Each individual should eventually hold their own Drive node and optional minimum personal repo.
+
+The platform should link to these nodes but not seize control of the member's entire working library.
+
+## Dashboard visibility
+
+Suggested visibility states:
+
+- private
+- member-only
+- collective-only
+- branch-only
+- public-safe
+- archived
+
+## Registry fields
+
+Required member registry fields:
 
 - member_id
 - display_name
-- wallet_address_optional
+- email
+- wallet_address
 - platform_coin
 - collective_coin
 - primary_collective_coin
 - sub_collective_coin
 - role_status
-- Drive folder
-- repo URL optional
-- skills
+- drive_folder
+- repo_url
+- permission_status
+- public_visibility
 - notes
 
-## Public/private split
+## Compliance boundary
 
-Public profiles may show:
+Membership and contribution records must not be represented as guaranteed profit, employment status, securities ownership or tax advice.
 
-- display name
-- creator category
-- public profile description
-- approved collections
-- approved public links
+Use the language of:
 
-Private records may include:
-
-- email
-- legal name if needed
-- wallet details
-- contract drafts
-- permission notes
-- private Drive links
-
-Private fields must not be exported into public dashboard JSON unless explicitly approved.
+- membership record
+- contributor record
+- profile record
+- permission scope
+- royalty accounting record
+- review status
