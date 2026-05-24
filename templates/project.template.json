@@ -1,0 +1,13 @@
+{
+  "project_id": "PRJ-000000",
+  "project_title": "Example Project",
+  "project_type": "library_project",
+  "collective_scope": "DAWC",
+  "lead_member_id": "",
+  "linked_assets": [],
+  "linked_contracts": [],
+  "drive_folder": "",
+  "github_path": "examples/projects/PRJ-000000.json",
+  "status": "draft",
+  "notes": "Project record connecting members, assets, review status and dashboard display status."
+}
