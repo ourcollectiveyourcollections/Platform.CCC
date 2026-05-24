@@ -1,0 +1,24 @@
+name: Validate Platform.CCC Metadata
+
+on:
+  push:
+    paths:
+      - '**/*.json'
+      - 'scripts/validate_metadata.py'
+      - '.github/workflows/validate-metadata.yml'
+  pull_request:
+    paths:
+      - '**/*.json'
+      - 'scripts/validate_metadata.py'
+      - '.github/workflows/validate-metadata.yml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate example records
+        run: |
+          python scripts/validate_metadata.py examples/ccc/collective.json
+          python scripts/validate_metadata.py examples/daycc/collective.json
+          python scripts/validate_metadata.py examples/dawc/collective.json
