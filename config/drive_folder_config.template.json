@@ -1,0 +1,26 @@
+{
+  "status": "template_only",
+  "notes": "Confirm real folder IDs before enabling Apps Script automation. Do not commit private folder names that expose member data.",
+  "platform_root_folder_id": "REPLACE_WITH_PLATFORM_ROOT_FOLDER_ID",
+  "ccc_library_folder_id": "REPLACE_WITH_CCC_LIBRARY_FOLDER_ID",
+  "shared_library_folder_id": "REPLACE_WITH_SHARED_LIBRARY_FOLDER_ID",
+  "archive_folder_id": "REPLACE_WITH_ARCHIVE_FOLDER_ID",
+  "member_folder_template": {
+    "folders": [
+      "00_profile",
+      "01_uploaded_assets",
+      "02_project_contributions",
+      "03_contracts",
+      "04_metadata",
+      "05_mint_packs",
+      "06_allocation_records",
+      "99_archive"
+    ]
+  },
+  "automation_safety": {
+    "create_folders_enabled": false,
+    "write_registry_enabled": false,
+    "public_export_enabled": false,
+    "requires_operator_review": true
+  }
+}
