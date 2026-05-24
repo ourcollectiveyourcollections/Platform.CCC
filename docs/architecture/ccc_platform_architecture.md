@@ -1,47 +1,42 @@
 # CCC Platform Architecture
 
+Repository: `NCNBOUWER/Platform.CCC`  
+Platform: Create Your Collective  
+Coin: CCC — Creatives' Coin Collections  
+Status: canonical architecture scaffold
+
 ## Purpose
 
-This document defines the canonical architecture for **Create Your Collective / CCC**.
+Create Your Collective is a Web2-first, Web3-ready platform for creating structured creator, contributor, project, contract, royalty and collection libraries.
 
-It is the Lane A architecture spine for Platform.CCC and should be read with:
-
-- `config/platform_hierarchy.json`
-- `docs/source_of_truth_register.md`
-- `docs/repo_drive_sync_rules.md`
-- `docs/interface/dashboard_structure.md`
-
-## Platform statement
-
-Create Your Collective is a registry-first platform for turning people, collectives, projects, files, creative works, contracts, contribution records and mint-ready metadata into structured decentralised libraries.
-
-It begins as:
+The platform does not begin as speculative token issuance. It begins as a registry-first architecture:
 
 ```text
-profiles
-+ folders
-+ registries
-+ permissions
-+ metadata
-+ contribution logs
-+ royalty accounting records
-+ dashboard exports
+people
+→ profiles
+→ folders
+→ assets
+→ projects
+→ contracts
+→ contribution records
+→ royalty accounting records
+→ metadata
+→ mint-ready packages
+→ optional Ethereum proof layer
 ```
 
-Ethereum is a later provenance/mint layer, not the first operational database.
-
-## Canonical hierarchy
+## Correct layer hierarchy
 
 ```text
 Create Your Collective
 Coin: CCC — Creatives' Coin Collections
-│
+
 └── Day A Week
     Coin: DAYCC — Day-A-Week Community Coin
-    │
+
     └── Day-A-Week-Collective
         Coin: DAWC — Day-A-Week Collective
-        │
+
         ├── Day-A-Week Girls
         │   Coin: DAW.G — Da.Gorls
         │
@@ -51,107 +46,144 @@ Coin: CCC — Creatives' Coin Collections
 
 ## Layer definitions
 
-### Create Your Collective / CCC
+### Platform layer — CCC
 
-Platform layer.
+Create Your Collective is the reusable product/platform.
 
-Owns:
+CCC is the platform-level coin/registry concept.
 
-- platform schema
-- member/contributor profile logic
-- collective creation logic
-- shared library templates
-- dashboard pattern
-- safe public wording
-- export and mint-pack standards
+It covers:
 
-### Day A Week / DAYCC
+- members
+- contributors
+- platform-level profiles
+- future collectives
+- reusable collection templates
+- creator/contributor libraries
 
-First launch collective and broad community layer.
-
-Owns:
-
-- open participants
-- non-primary members
-- broad community records
-- gateway membership into the first case study
-
-### Day-A-Week-Collective / DAWC
-
-Primary founding collective.
-
-Owns:
-
-- founding members
-- founding group profiles
-- primary shared projects
-- DAW.G / DAW.B inheritance
-- first internal coordination model
-
-### DAW.G and DAW.B
-
-Sibling sub-collectives under DAWC.
-
-Rules:
+Precision target:
 
 ```text
+7dp+ and collecting royalty/accounting records
+```
+
+### Launch collective layer — DAYCC
+
+Day A Week is the first launch collective under CCC.
+
+DAYCC is the broad community/base shell.
+
+It covers:
+
+- open members
+- non-primary members
+- external groups
+- future community-level users
+- participants under Day A Week but outside the founding inner collective
+
+Precision target:
+
+```text
+5–6dp and collecting royalty/accounting records
+```
+
+### Primary collective layer — DAWC
+
+Day-A-Week-Collective is the founding inner collective.
+
+DAWC covers:
+
+- founding groups
+- founding member profiles
+- shared founding projects
+- founding collective records
+
+Precision target:
+
+```text
+6dp and royalties/accounting records
+```
+
+### Sibling sub-collective layer — DAW.G and DAW.B
+
+DAW.G and DAW.B are sibling sub-collectives under DAWC.
+
+Rule:
+
+```text
+DAW.G ∩ DAW.B = Ø
 DAW.G ⊂ DAWC
 DAW.B ⊂ DAWC
-DAW.G ∩ DAW.B = Ø
+DAWC ⊂ DAYCC
+DAYCC ⊂ CCC
 ```
 
-A person may be represented in one sibling branch only unless the governance model is intentionally revised.
+Meaning:
 
-## System components
+- DAW.G members inherit upward into DAWC, DAYCC and CCC.
+- DAW.B members inherit upward into DAWC, DAYCC and CCC.
+- DAW.G and DAW.B membership is mutually exclusive unless explicitly restructured later.
 
-| Component | Role | Canonical system |
+## System stack
+
+| Layer | Tool | Canonical role |
 |---|---|---|
-| Member profile | Identity and contribution node | Sheets + GitHub template |
-| Collective profile | Group identity and scope | GitHub config + Sheets |
-| Asset record | Creative/work file record | Sheets + Drive |
-| Project record | Multi-party activity/object | Sheets + GitHub template |
-| Contract record | Permission/legal scaffold | Drive + GitHub template |
-| Royalty record | Internal accounting scaffold | Sheets snapshot |
-| Mint pack | Reviewed metadata package | Drive build folder + GitHub scripts |
-| Dashboard export | Public/private display data | Generated JSON |
+| Interface | Squarespace | public/member-facing Web2 interface |
+| File storage | Google Drive | source files, member folders, asset libraries |
+| Live registry | Google Sheets | member, asset, project, contribution and mint queue rows |
+| Code/source control | GitHub | schemas, templates, scripts, docs, examples |
+| Design | Canva | visual/layer production |
+| Local AI | Ollama | drafting and metadata assistance only |
+| Chain target | Ethereum | optional proof/mint layer after review |
 
-## Operational architecture
+## Design principle
+
+Every member is a node.
 
 ```text
-Squarespace form / manual intake
-→ Google Sheets registry row
-→ Google Drive folder/file reference
-→ GitHub schema/template validation
-→ operator approval
-→ dashboard export
-→ Squarespace display
-→ optional testnet mint-pack
+node = person + profile + wallet reference + folder + records + permissions + contributions
 ```
 
-## Design principles
+Every project is a container.
 
-1. Registry before token.
-2. Metadata before mint.
-3. Permission before publication.
-4. Review before public financial language.
-5. Drive owns raw files.
-6. Sheets own live rows.
-7. GitHub owns schemas and automation.
-8. Squarespace displays approved outputs.
-9. Ethereum proves reviewed records later.
+```text
+project = assets + contributors + contract records + permissions + royalty accounting + metadata
+```
+
+Every collection is a boundary.
+
+```text
+collection = membership scope + asset scope + permission scope + dashboard scope
+```
 
 ## Non-goals for MVP
 
-The MVP should not:
+The MVP does not:
 
-- issue live investment products
-- promise yield or passive income
+- issue guaranteed financial returns
+- create securities-style language
 - store private keys
-- gate Minecraft gameplay with token ownership
-- expose private Drive records publicly
-- replace legal/tax review
-- merge unrelated project claims into CCC
+- store private member data in GitHub
+- publicly expose raw Drive folders
+- merge Minecraft gameplay economics
+- import unrelated project claims without explicit bridge instruction
 
-## Current implementation status
+## MVP proof target
 
-The repository now contains root-level architecture scaffolding. The older `Platform.CCC_upload_root/` folder remains as upload staging until root parity is complete.
+The first proof is not a live speculative token.
+
+The first proof is:
+
+```text
+one member profile
+one asset record
+one project record
+one contract record
+one contribution record
+one royalty accounting record
+one metadata object
+one mint-pack draft
+one dashboard-safe export
+```
+
+Once this works, the platform can scale into repeatable collective creation.
