@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AllocationRecord",
+  "type": "object",
+  "required": ["allocation_record_id", "scope", "precision_label", "participants", "status"],
+  "properties": {
+    "allocation_record_id": { "type": "string" },
+    "scope": { "type": "string" },
+    "precision_label": { "type": "string" },
+    "participants": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["participant_type", "participant_id", "allocation_units"],
+        "properties": {
+          "participant_type": { "type": "string" },
+          "participant_id": { "type": "string" },
+          "allocation_units": { "type": "integer" }
+        }
+      }
+    },
+    "status": { "type": "string" },
+    "notes": { "type": "string" }
+  }
+}
