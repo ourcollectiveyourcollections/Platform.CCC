@@ -1,5 +1,8 @@
 # Library Model
 
+Repository: `NCNBOUWER/Platform.CCC`  
+Status: canonical library scaffold
+
 ## Purpose
 
 Define how Create Your Collective organises member, asset, project, contract and metadata libraries.
@@ -20,132 +23,221 @@ folder structure
 + optional mint-pack output
 ```
 
-## Library classes
+## Library types
 
-### Platform library
+### 1. Platform library — CCC
 
-Layer: CCC
-
-Contains:
+Scope:
 
 - platform templates
-- schemas
-- contributor profile patterns
-- customer collective templates
-- public example records
-- approved dashboard patterns
+- platform profiles
+- platform contributors
+- platform examples
+- future collectives
 
-### Launch collective library
+Drive area:
 
-Layer: DAYCC
+```text
+Create Your Collective.CCC/
+```
 
-Contains:
+GitHub area:
 
-- open member profiles
-- open group profiles
-- broad community assets
-- launch case study projects
+```text
+config/
+schemas/
+templates/
+examples/ccc/
+registries/
+```
 
-### Primary collective library
+### 2. Launch community library — DAYCC
 
-Layer: DAWC
+Scope:
 
-Contains:
+- open and non-primary members
+- external groups
+- broad Day A Week community assets
+- public-safe community examples
+
+Drive area:
+
+```text
+Day-A-Week.Community/
+```
+
+GitHub area:
+
+```text
+examples/daycc/
+```
+
+### 3. Primary collective library — DAWC
+
+Scope:
 
 - founding member profiles
-- founding group profiles
-- internal shared projects
+- founding groups
+- primary DAWC assets and projects
 - founding contribution records
-- branch inheritance records
 
-### Sibling branch libraries
+Drive area:
 
-Layers: DAW.G and DAW.B
+```text
+Day-A-Week.Collective/
+```
 
-Contain:
+GitHub area:
+
+```text
+examples/dawc/
+```
+
+### 4. Sibling sub-collective libraries — DAW.G / DAW.B
+
+Scope:
 
 - branch member profiles
-- branch-specific projects
 - branch-specific assets
-- branch-specific contribution records
+- branch-specific projects
+- branch contribution records
 
-### Individual libraries
+Drive areas:
 
-Each person should eventually hold their own Drive/node.
+```text
+Day-A-Week.Girls/
+Day-A-Week.Boys/
+```
 
-Contains:
+GitHub areas:
 
-- personal source uploads
-- profile materials
-- contributed assets
-- project participation records
-- contract copies
+```text
+examples/daw-g/
+examples/daw-b/
+```
+
+### 5. Individual member libraries
+
+Scope:
+
+- member profile
+- uploaded assets
+- project contributions
+- personal contracts
+- metadata drafts
+- mint-pack drafts
 - royalty records
-- mint-pack candidates
 
-## Collection of collections
+Suggested Drive structure:
 
-Platform.CCC supports collections of collections.
+```text
+member_[member_id]_[display_name]/
+├── 00_profile/
+├── 01_uploaded_assets/
+├── 02_project_contributions/
+├── 03_contracts/
+├── 04_nft_metadata/
+├── 05_mint_packs/
+├── 06_royalty_records/
+└── 99_archive/
+```
+
+## Collection of collections model
+
+A Platform.CCC collection can contain other collections.
 
 Example:
 
 ```text
-Project NFT
-├── digital foreground art
-├── background layer
-├── legal contract layer
-├── physical build/deployment layer
+CCC platform collection
+└── DAYCC launch community collection
+    └── DAWC founding collective collection
+        ├── DAW.G branch collection
+        └── DAW.B branch collection
+```
+
+A project can also be a collection of multiple contribution layers:
+
+```text
+project NFT/library entry
+├── visual art layer
 ├── music/audio layer
-├── written description/lore
-├── contributor split
-└── mint-pack metadata
+├── written/lore layer
+├── legal/contract layer
+├── physical build layer
+├── contribution records
+├── royalty accounting records
+└── provenance metadata
 ```
 
-This makes the NFT a container record for multi-party contribution, not merely an image.
-
-## File authority
-
-| File type | Canonical home |
-|---|---|
-| raw art | Google Drive |
-| raw media | Google Drive |
-| contract drafts | Google Drive |
-| schemas | GitHub |
-| templates | GitHub |
-| live registry rows | Google Sheets |
-| registry snapshots | GitHub `registries/` |
-| dashboard widgets | GitHub |
-| deployed pages | Squarespace |
-| mint packs | Drive build folder + generated GitHub-safe manifest |
-
-## Status model
-
-Recommended statuses:
+## Asset lifecycle
 
 ```text
-draft
-submitted
-reviewing
-approved
-mint_ready
-testnet
-minted
-archived
-deprecated
-```
-
-## Publication model
-
-Only approved records should appear publicly.
-
-```text
-private source
+draft upload
 → registry row
-→ review
-→ approved export
-→ dashboard display
+→ metadata draft
+→ permission review
+→ approved library entry
+→ dashboard-safe export
+→ mint-pack candidate
+→ testnet candidate
+→ live mint candidate after review
 ```
 
-## Current limitation
+## Permission model
 
-The library model is currently scaffolded. Live automation must not be enabled until Drive parent folders, registry permissions and dashboard export boundaries are confirmed.
+Every library item needs:
+
+- creator reference
+- contributor references
+- collection scope
+- visibility state
+- review status
+- licence or permission status
+- royalty accounting reference if applicable
+
+## Dashboard indexing
+
+Dashboard cards should not read raw private folders.
+
+They should read safe exported records:
+
+```text
+Sheets row
+→ reviewed export JSON
+→ dashboard widget
+```
+
+## Archive model
+
+Do not delete source material casually.
+
+Use state labels:
+
+- draft
+- submitted
+- approved
+- exported
+- mint_ready
+- minted
+- deprecated
+- archived
+
+## Public boundary
+
+Only publish:
+
+- approved titles
+- approved descriptions
+- public-safe images/files
+- public-safe contributor names
+- public-safe status records
+
+Do not publish:
+
+- private Drive folders
+- legal drafts
+- identity documents
+- personal emails
+- wallet secrets
+- unreviewed royalty terms
