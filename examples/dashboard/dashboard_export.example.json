@@ -1,0 +1,43 @@
+{
+  "exported_at": "2026-05-24T00:00:00Z",
+  "platform": {
+    "name": "Create Your Collective",
+    "coin": "CCC",
+    "public_status": "alpha_scaffold"
+  },
+  "collectives": [
+    {
+      "collective_id": "COL-CCC",
+      "name": "Create Your Collective",
+      "coin": "CCC",
+      "status": "scaffold"
+    },
+    {
+      "collective_id": "COL-DAYCC",
+      "name": "Day A Week",
+      "coin": "DAYCC",
+      "status": "scaffold"
+    }
+  ],
+  "sub_collectives": [
+    {
+      "sub_collective_id": "SUB-DAWG",
+      "name": "Day-A-Week Girls",
+      "coin": "DAW.G",
+      "status": "scaffold"
+    },
+    {
+      "sub_collective_id": "SUB-DAWB",
+      "name": "Day-A-Week Boys",
+      "coin": "DAW.B",
+      "status": "scaffold"
+    }
+  ],
+  "members": [],
+  "assets": [],
+  "projects": [],
+  "mint_queue": [],
+  "public_scope": "redacted_demo_only",
+  "redaction_status": "safe_example_no_private_data",
+  "notes": "Example dashboard export for Squarespace/widget testing."
+}
