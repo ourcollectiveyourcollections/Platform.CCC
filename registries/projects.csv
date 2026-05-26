@@ -1,0 +1,3 @@
+project_id,project_title,project_type,collective_scope,lead_member_id,linked_assets,linked_contracts,drive_folder,github_path,status,notes
+PRJ-TEMPLATE-001,Multi-Contributor Library Project,library_project,DAWC,,AST-TEMPLATE-001,,,examples/projects/multi_contributor_project.json,template,Example artist legal builder collective approval container
+PRJ-DAYCC-001,Day A Week Launch Case,case_study,DAYCC,,,,Day-A-Week.Community,examples/daycc/,scaffold,First product case for Create Your Collective
