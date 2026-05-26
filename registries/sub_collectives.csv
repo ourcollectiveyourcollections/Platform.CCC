@@ -1,0 +1,3 @@
+sub_collective_id,name,coin,coin_full_name,parent_collective_id,sibling_rule,asset_class,royalty_precision,drive_folder,status,notes
+SUB-DAWG,Day-A-Week Girls,DAW.G,Da.Gorls,COL-DAWC,mutually exclusive with DAW.B,Member profiles,5dp,Day-A-Week.Girls,active scaffold,Sibling A
+SUB-DAWB,Day-A-Week Boys,DAW.B,Da.Boiis,COL-DAWC,mutually exclusive with DAW.G,Member profiles,5dp,Day-A-Week.Boys,active scaffold,Sibling B
