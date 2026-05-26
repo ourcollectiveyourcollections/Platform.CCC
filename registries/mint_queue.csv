@@ -1,0 +1,2 @@
+mint_pack_id,asset_id,project_id,token_standard_target,network,metadata_path,file_manifest_path,status,review_required,notes
+MINT-TEMPLATE-001,AST-TEMPLATE-001,PRJ-TEMPLATE-001,ERC-1155 or ERC-721,Ethereum testnet,mint_packs/MINT-TEMPLATE-001/metadata.json,mint_packs/MINT-TEMPLATE-001/manifest.json,not_ready,yes,No live mint until legal metadata and permission review
