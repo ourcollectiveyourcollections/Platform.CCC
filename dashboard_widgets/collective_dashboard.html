@@ -1,0 +1,21 @@
+<section class="cyc-card" data-cyc-widget="collective-dashboard">
+  <h2>Collective Dashboard</h2>
+  <p class="cyc-muted">Shows public-safe collective records from reviewed dashboard JSON.</p>
+  <div id="cyc-collective-dashboard"></div>
+</section>
+
+<script src="./dashboard_fetch.js"></script>
+<script>
+(async function () {
+  const target = document.getElementById("cyc-collective-dashboard");
+  try {
+    const data = await cycFetchJson("../examples/dashboard/dashboard_export.example.json");
+    const collectives = data.collectives || [];
+    target.innerHTML = collectives.map(function (c) {
+      return `<article class="cyc-row"><strong>${cycEscapeHtml(c.name || c.collective_id)}</strong><br><span>${cycEscapeHtml(c.coin || "")}</span> — <span>${cycEscapeHtml(c.status || "")}</span></article>`;
+    }).join("");
+  } catch (error) {
+    target.textContent = "Collective data unavailable.";
+  }
+})();
+</script>
