@@ -1,0 +1,23 @@
+<section class="cyc-card" data-cyc-widget="member-dashboard">
+  <h2>Member Dashboard</h2>
+  <p class="cyc-muted">Redacted scaffold view. Connect to reviewed dashboard JSON only.</p>
+  <div id="cyc-member-dashboard"></div>
+</section>
+
+<script src="./dashboard_fetch.js"></script>
+<script>
+(async function () {
+  const target = document.getElementById("cyc-member-dashboard");
+  try {
+    const data = await cycFetchJson("../examples/dashboard/dashboard_export.example.json");
+    const members = data.members || [];
+    target.innerHTML = members.length
+      ? members.map(function (m) {
+          return `<article class="cyc-row"><strong>${cycEscapeHtml(m.display_name || m.member_id)}</strong><br><span>${cycEscapeHtml(m.status || "")}</span></article>`;
+        }).join("")
+      : "<p>No public member records in this safe example export.</p>";
+  } catch (error) {
+    target.textContent = "Dashboard data unavailable.";
+  }
+})();
+</script>
