@@ -1,0 +1,27 @@
+<section class="cyc-card" data-cyc-widget="library-explorer">
+  <h2>Library Explorer</h2>
+  <p class="cyc-muted">Read-only scaffold view for approved asset and project summaries.</p>
+  <div id="cyc-library-explorer"></div>
+</section>
+
+<script src="./dashboard_fetch.js"></script>
+<script>
+(async function () {
+  const target = document.getElementById("cyc-library-explorer");
+  try {
+    const data = await cycFetchJson("../examples/dashboard/dashboard_export.example.json");
+    const assets = data.assets || [];
+    const projects = data.projects || [];
+    const rows = [];
+    assets.forEach(function (a) {
+      rows.push(`<article class="cyc-row"><strong>${cycEscapeHtml(a.asset_title || a.asset_id)}</strong><br><span>Asset</span> — <span>${cycEscapeHtml(a.status || "")}</span></article>`);
+    });
+    projects.forEach(function (p) {
+      rows.push(`<article class="cyc-row"><strong>${cycEscapeHtml(p.project_title || p.project_id)}</strong><br><span>Project</span> — <span>${cycEscapeHtml(p.status || "")}</span></article>`);
+    });
+    target.innerHTML = rows.length ? rows.join("") : "<p>No public library records in this safe example export.</p>";
+  } catch (error) {
+    target.textContent = "Library data unavailable.";
+  }
+})();
+</script>
