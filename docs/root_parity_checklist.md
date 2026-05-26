@@ -2,7 +2,7 @@
 
 Repository: `NCNBOUWER/Platform.CCC`  
 Target wrapper: `Platform.CCC_upload_root/`  
-Status: active parity check
+Status: parity substantially complete / final inspection pending
 
 ## Purpose
 
@@ -60,7 +60,9 @@ Do not delete `Platform.CCC_upload_root/` until every required file is either:
 - [x] `templates/project.template.json`
 - [x] `templates/allocation_record.template.json`
 - [x] `templates/nft_metadata.template.json`
-- [ ] contract templates pending root review
+- [x] `templates/contracts/contributor_participation.md`
+- [x] `templates/contracts/collective_asset_licence.md`
+- [x] `templates/contracts/physical_deployment_licence.md`
 
 ### Scripts / Automation
 
@@ -90,7 +92,13 @@ Do not delete `Platform.CCC_upload_root/` until every required file is either:
 - [x] `config/drive_folder_config.template.json`
 - [x] `config/drive_manifest.template.json`
 - [x] `examples/dashboard/dashboard_export.example.json`
-- [ ] registry CSV root parity pending review
+- [x] `registries/README.md`
+- [x] `registries/collectives.csv`
+- [x] `registries/sub_collectives.csv`
+- [x] `registries/members.csv`
+- [x] `registries/assets.csv`
+- [x] `registries/projects.csv`
+- [x] `registries/mint_queue.csv`
 
 ## Retirement criteria
 
@@ -104,4 +112,4 @@ The wrapper can be retired when:
 
 ## Current recommendation
 
-Keep `Platform.CCC_upload_root/` for one more pass while registry CSVs and contract template parity are verified. Automation scripts and dashboard widgets are now represented at root.
+Root parity is now substantially complete. Keep `Platform.CCC_upload_root/` only until one final unique-file inspection confirms no non-duplicated required files remain. After that, remove or archive the wrapper in a single rollback-safe commit.
