@@ -33,6 +33,15 @@ No guessed deletion should be committed.
 | `Platform.CCC_upload_root/README.md` | removed | `7cfe552b639e9c51ccbbca14edda3ccd85900245` |
 | `Platform.CCC_upload_root/package_manifest.json` | removed | `40f877b1b8a04c24a3a81841a2b5c7a197eccbae` |
 | `Platform.CCC_upload_root/docs/handoff_summary.md` | removed | `f8747e3ad3293672e23e96bcc7034e41e6f3a8ab` |
+| `Platform.CCC_upload_root/docs/implementation_plan.md` | removed | `86a4cec9ce7aae5f58ecc889a76bd3bf21baf85d` |
+| `Platform.CCC_upload_root/docs/drive_mapping.md` | removed | `d65e7b23d48449b586b50a388158a95814157265` |
+| `Platform.CCC_upload_root/docs/squarespace_interface.md` | removed | `3e3d834de7a2a94cc429b9eb2a8fc3b50c50fac8` |
+| `Platform.CCC_upload_root/docs/membership_model.md` | removed | `0e718f21cd3c932be9beda81b1ff471af286863a` |
+| `Platform.CCC_upload_root/docs/permissions_model.md` | removed | `bdf05dab2cbf6ae128b68806efce6887b5a9302b` |
+| `Platform.CCC_upload_root/docs/automation_plan.md` | removed | `1faea0663cd277125f17f5ee29bd716c141348e5` |
+| `Platform.CCC_upload_root/docs/legal_guardrails.md` | removed | `5236c478698f7f7dff70d899d87a0226bdadfece` |
+| `Platform.CCC_upload_root/docs/upload_instructions.md` | removed | `e58f3d449c710e90d9ba81d4d43ed2541afe22d5` |
+| `Platform.CCC_upload_root/docs/roadmap.md` | removed | `86867b6180800cbe0484efedb37b755749c6912c` |
 
 ## Remaining retirement procedure
 
@@ -49,4 +58,4 @@ Do not use guessed paths for final deletion unless the file has been fetched and
 
 ## Current recommendation
 
-Continue removing confirmed duplicates in small batches, or perform a manual GitHub directory review and delete remaining wrapper contents from the web interface if faster.
+Known wrapper documentation duplicates are removed. Continue with verified cleanup of schema/template/script/widget/example/registry duplicates, or perform a manual GitHub directory review and delete remaining wrapper contents from the web interface if faster.
