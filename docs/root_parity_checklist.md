@@ -65,12 +65,12 @@ Do not delete `Platform.CCC_upload_root/` until every required file is either:
 ### Scripts / Automation
 
 - [x] `scripts/validate_metadata.py`
-- [ ] `scripts/build_mint_pack.py` pending root review
-- [ ] `scripts/export_dashboard_json.py` pending root review
-- [ ] `apps_script/onboarding.gs` pending root review
-- [ ] `apps_script/asset_submission.gs` pending root review
-- [ ] `apps_script/dashboard_export.gs` pending root review
-- [ ] `apps_script/create_drive_folders.gs` pending root review
+- [x] `scripts/build_mint_pack.py`
+- [x] `scripts/export_dashboard_json.py`
+- [x] `apps_script/onboarding.gs`
+- [x] `apps_script/asset_submission.gs`
+- [x] `apps_script/dashboard_export.gs`
+- [x] `apps_script/create_drive_folders.gs`
 
 ### Interface
 
@@ -79,7 +79,10 @@ Do not delete `Platform.CCC_upload_root/` until every required file is either:
 - [x] `docs/interface/dashboard_structure.md`
 - [x] `docs/interface/frontend_backend_contracts.md`
 - [x] `docs/interface/squarespace_page_map.md`
-- [ ] dashboard widget root parity pending review
+- [x] `dashboard_widgets/dashboard_fetch.js`
+- [x] `dashboard_widgets/member_dashboard.html`
+- [x] `dashboard_widgets/collective_dashboard.html`
+- [x] `dashboard_widgets/library_explorer.html`
 
 ### Registry / Config
 
@@ -101,4 +104,4 @@ The wrapper can be retired when:
 
 ## Current recommendation
 
-Keep `Platform.CCC_upload_root/` for one more pass while automation scripts, dashboard widgets and registry CSVs are verified/promoted.
+Keep `Platform.CCC_upload_root/` for one more pass while registry CSVs and contract template parity are verified. Automation scripts and dashboard widgets are now represented at root.
